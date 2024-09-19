@@ -31,3 +31,15 @@ sys.stdin.readline()과 input()의 차이점
 용도	      소규모 입력 처리에 적합     대량 입력 처리에 적합
 사용 방식	  고수준 입력 방식	         저수준 입력 방식
 
+
+import sys
+n = int(sys.stdin.readline())
+cards = set(map(int, sys.stdin.readline().split()))
+m = int(sys.stdin.readline())
+checks = list(map(int, sys.stdin.readline().split()))
+
+for j in range(m):
+    if checks[j] not in cards:
+        print(0, end = ' ')
+    else:
+        print(1, end=' ')
